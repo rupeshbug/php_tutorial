@@ -1,8 +1,3 @@
-<?php
-echo "I love pizza <br>";
-echo "Its really good";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +8,20 @@ echo "Its really good";
 </head>
 
 <body>
-    <br>
-    <button>Order a pizza</button>
+    <form action="index.php" method="post">
+        <label>username: </label><br>
+        <input type=" text" name="username"><br>
+
+        <label>password: </label><br>
+        <input type="password" name="password"><br>
+
+        <input type="submit" value="Log in">
+    </form>
 </body>
 
 </html>
+
+<?php
+echo "{$_POST["username"]} <br>";
+echo "{$_POST["password"]} <br>";
+?>
