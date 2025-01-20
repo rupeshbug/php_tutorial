@@ -30,3 +30,9 @@ $capitals = array("Nepal" => "Kathmandu", "USA" => "Washington D.C", "Japan" => 
 foreach ($capitals as $key => $value) {
     echo "{$key} ===> {$value} <br>";
 }
+
+$keys = array_keys($capitals);
+
+foreach ($keys as $key) {
+    echo "{$key} <br>";
+}
