@@ -19,3 +19,14 @@ foreach ($foods as $food) {
 foreach ($reversed_foods as $food) {
     echo "{$food} <br>";
 }
+
+echo "<br>";
+echo  "<br>";
+
+// assiciative array
+
+$capitals = array("Nepal" => "Kathmandu", "USA" => "Washington D.C", "Japan" => "Tokyo");
+
+foreach ($capitals as $key => $value) {
+    echo "{$key} ===> {$value} <br>";
+}
