@@ -9,8 +9,10 @@
 
 <body>
     <form action="index.php" method="post">
-        <label>quantity: </label><br>
-        <input type=" text" name="quantity"><br>
+        <label>x: </label><br>
+        <input type=" text" name="x"><br>
+        <label>y: </label><br>
+        <input type=" text" name="y"><br>
         <input type="submit" value="total">
     </form>
 </body>
@@ -18,13 +20,18 @@
 </html>
 
 <?php
-$item = "pizza";
-$price = 5.99;
-$quantity = $_POST["quantity"];
+
+$x = $_POST["x"];
+$y = $_POST["y"];
+
 $total = null;
 
-$total = $quantity * $price;
+// $total = abs($x);
+// $total = round($x);
+// $total = floor($x);
 
-echo "You have ordered {$quantity} x {$item}/s <br>";
-echo "Your total is: \${$total}";
+$total = pow($x, $y);
+
+echo $total;
+
 ?>
