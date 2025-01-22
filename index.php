@@ -1,21 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<form action="index.php" method="post">
+    username: <br>
+    <input type="text" name="username"><br>
+    age: <br>
+    <input type="text" name="age"><br>
+    email: <br>
+    <input type="text" name="email"><br>
+    <input type="submit" name="login" value="login">
+</form>
+
+</html>
+
 <?php
-function hypotenuse($a, $b)
-{
-    $c = sqrt($a ** 2 + $b ** 2);
-    return $c;
+if (isset($_POST["login"])) {
+
+    $age = filter_input(INPUT_POST, "age", FILTER_VALIDATE_INT);
+    $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+
+    if (empty($age)) {
+        echo "Enter a valid number. <br>";
+    } else {
+        echo "You are $age years old. <br>";
+    }
+
+    if (empty($email)) {
+        echo "Enter a valid email. <br>";
+    } else {
+        echo "Your email is $email. <br>";
+    }
 }
-
-// hypotenuse(3, 4);
-
-$username = "Rupesh Chaulagain";
-$phone = "123-456-7890";
-
-$username = strtolower($username);
-// $username = strtoupper($username);
-// $username = trim($username);
-
-// $phone = str_replace("-", "", $phone);
-
-// $user_name = strrev($username);
-
-echo $phone;
+?>
