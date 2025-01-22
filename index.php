@@ -5,4 +5,17 @@ function hypotenuse($a, $b)
     return $c;
 }
 
-echo hypotenuse(3, 4);
+// hypotenuse(3, 4);
+
+$username = "Rupesh Chaulagain";
+$phone = "123-456-7890";
+
+$username = strtolower($username);
+// $username = strtoupper($username);
+// $username = trim($username);
+
+// $phone = str_replace("-", "", $phone);
+
+// $user_name = strrev($username);
+
+echo $phone;
