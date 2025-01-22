@@ -10,7 +10,7 @@
 <body>
 
 </body>
-<form action="inputVal.php" method="post">
+<form action="index.php" method="post">
     username: <br>
     <input type="text" name="username"><br>
     age: <br>
