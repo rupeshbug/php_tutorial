@@ -1,14 +1,37 @@
 <?php
-setcookie("fav_food", "pizza", time() - 0, "/");
-setcookie("fav_drink", "coffee", time() + (86400 * 3), "/");
-setcookie("fav_dessert", "ice-cream", time() + (86400 * 4), "/");
+session_start();
+?>
 
-foreach ($_COOKIE as $key => $value) {
-    echo "{$key} = {$value} <br>";
-}
+<!DOCTYPE html>
+<html lang="en">
 
-if (isset($_COOKIE["fav_food"])) {
-    echo "BUY SOME {$_COOKIE["fav_food"]}!! <br>";
-} else {
-    echo "I dont know your favourite food! <br>";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        username: <br>
+        <input type="text" name="username"><br>
+        password: <br>
+        <input type="password" name="password"><br>
+        <input type="submit" name="login" value="login"><br>
+    </form>
+</body>
+
+</html>
+
+<?php
+if (isset($_POST["login"])) {
+    if (!empty($_POST["username"] && !empty($_POST["password"]))) {
+        $_SESSION["username"] = $_POST["username"];
+        $_SESSION["password"] = $_POST["password"];
+
+        header("Location: home.php");
+    } else {
+        echo "Missing credentials! <br>";
+    }
 }
+?>
