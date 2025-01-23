@@ -1,2 +1,1 @@
-<!-- database connection -->
-<!-- messi -->
+<!-- mysql database connection -->
