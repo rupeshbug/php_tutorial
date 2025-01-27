@@ -9,10 +9,25 @@
 
 <body>
     <h1>PHP Variable Checker</h1>
-    <form action="" method="post">
-        <label for="username">Enter a username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
-        <input type="submit" value="Check">
+    <form action="signup.php" method="POST" class="signup-form">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="submit-btn">Sign Up</button>
     </form>
 
     <?php
