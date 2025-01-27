@@ -48,7 +48,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .form-group input:focus {
@@ -73,6 +73,46 @@ body {
     background: #148577;
     transition: 0.3s ease-in-out;
 }
+
+
+
+/**************** Login *******************/
+
+/* Login container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Redirect text and link */
+.redirect-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.redirect-link {
+    color: #14B8a6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redirect-link:hover {
+    text-decoration: underline;
+}
+
+
 
 /* Responsive design */
 @media (max-width: 600px){
