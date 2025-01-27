@@ -1,0 +1,95 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/**************** Signup *******************/
+
+/* Signup container */
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styles */
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    border-color: #14B8a6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(132, 250, 176, 0.5);
+}
+
+/* Button styles */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #14B8a6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #148577;
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 600px){
+    .signup-container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .signup-form h2 {
+        font-size: 24px;
+    }
+
+    .form-group input {
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+}
